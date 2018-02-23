@@ -3,6 +3,36 @@ Project 2
 
 README FILE
 
+Summary: We are going to simulate the writing of logs.
+	In a nutshell, the problem can be specified as
+	follows:
+	There is a process who reads from a single text
+	file, picks up the next line of text, and puts
+	it in a single buffer. Let there be five buffers
+	and our producer process keeps on trying to fill
+	those five buffers. Then, this process sets a flag
+	to indicate that one of the five buffers is full.
+	The process can write into a buffer only if the 
+	buffer is empty. There are a number of other 
+	processes (consumers) who keep on looking for a
+	buffer to become full. One of these processes 
+	should be able to pick up the text in the buffer
+	and write it into the log file. The process must
+	make sure that the file is not opened by another
+	process for writing.
+
 ----------------------------------------------------
 
-
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   Makefile
+#       new file:   consumer.c
+#       new file:   consumer.h
+#       new file:   main.c
+#       new file:   makeargv.c
+#       new file:   producer.c
+#       new file:   producer.h
+#
+---------------------------------------------------
