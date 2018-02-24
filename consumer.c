@@ -5,14 +5,19 @@
 #include <time.h>
 #include "timeFormat.h"
 #include "consumer.h"
+#include <sys/shm.h>
+#include <sys/types.h>
+#include <sys/ipc.h>
+
+
 
 #define MAX_STRING_LENGTH 20
-
+#define SHMSZ = 100
 
 
 
 //function for consumer to write to its own log file
-void consumerLog( int processID, int index, char* stringArray, int caseOption, char* termReason)
+void consumerLog( int processID, int index, char* stringArray, int caseOption, char* termReason, int bufferNumber, int sleepTime)
 {
 	int pid = processID;
 	int i = index;
@@ -75,6 +80,51 @@ void consumerLog( int processID, int index, char* stringArray, int caseOption, c
 	//close file
 	fclose(logFile);
 }
+
+
+
+
+void consumerReadFromSharedMemory(int shmid, key_t key, char* sharedmem, char* str)
+{
+	int id = shmid;
+	key_t memkey = key;
+	char* shm = sharedmem;
+	char* s = str;
+
+	if((id = shmget(memkey, SHMSZ, 0666)) < )
+	{
+		perror("Failed to locate shared memory!");
+		exit(EXIT_FAILURE);
+	}
+	
+	if((shm = shmat(id, NULL, 0)) == (char*) -1)
+	{
+		perror("Failed to attach to dataspace");
+		exit(EXIT_FAILURE);
+	}
+	
+	if(*shm == 1)
+	{
+		s = shm;
+		printf("consumer read: %s\n", s);
+	}
+	else
+	{
+		sleep(1);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

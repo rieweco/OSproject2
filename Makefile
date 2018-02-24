@@ -4,11 +4,15 @@ GCC = gcc $(CFLAGS)
 
 all:	producer consumer master
 
-producer: 
+producer: producer.c timeFormat.c
+	$(CC) $(CFLAGS) producer producer.c timeFormat.c	
 
-consumer: 
+consumer: consumer.c timeFormat.c
+	$(CC) $(CFLAGS) consumer consumer.c timeFormat.c
 
-master:
+master: main.c master.c makeargv.c
+	$(CC) $(CFLAGS) master main.c master.c makeargv.c 
+	
 
 clean:
 	rm -f *.o producer consumer master
