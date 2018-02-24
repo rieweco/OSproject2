@@ -61,6 +61,20 @@ Summary: We are going to simulate the writing of logs.
 #
 ---------------------------------------------------
 
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   consumer.c
+#       modified:   consumer.h
+#       modified:   main.c
+#       new file:   makeargv.h
+#       modified:   master.c
+#       modified:   master.h
+#       modified:   producer.c
+#       modified:   producer.h
+#
+---------------------------------------------------
 
 
 
