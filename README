@@ -49,7 +49,17 @@ Summary: We are going to simulate the writing of logs.
 #       modified:   producer.c
 #
 ---------------------------------------------------
-
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   consumer.c
+#       modified:   master.c
+#       modified:   producer.c
+#       new file:   timeFormat.c
+#       new file:   timeFormat.h
+#
+---------------------------------------------------
 
 
 
