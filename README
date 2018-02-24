@@ -3,6 +3,14 @@ Project 2
 
 README FILE
 
+**** NOTE****
+this project is unfinished in its current state. I am able to read in arguments, spawn off child processes, and create shared memory and access it. the Makefile is not set up properly so the .c files are not connecting. testing using main.c works alright, but I wanted to submit something for partial credit. I will try and continue updating the project past the due date on a separate branch to see if I can get it completed for my own benefit. Thank you for reading...
+
+
+Cody
+
+
+
 Summary: We are going to simulate the writing of logs.
 	In a nutshell, the problem can be specified as
 	follows:
