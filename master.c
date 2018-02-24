@@ -4,6 +4,7 @@
 #include <errno.h>
 #include "master.h"
 #include "timeFormat.h"
+#include <sys/shm.h>
 
 //fork producer and n consumers
 //n will be passed as a parameter
@@ -25,9 +26,4 @@ pid_t* createProducerAndConsumers(int numberOfConsumers, pid_t* processIDArray)
 	}
 	return processIDArray;
 }
-
-
-
-//signal handling
-//create signal handler
 
