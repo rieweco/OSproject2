@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include "master.h"
-
+#include "timeFormat.h"
 
 //fork producer and n consumers
 //n will be passed as a parameter
